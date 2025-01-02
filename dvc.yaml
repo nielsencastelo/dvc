@@ -1,0 +1,9 @@
+
+stages:
+  train:
+    cmd: jupyter nbconvert --to notebook --execute train_model.ipynb
+    deps:
+      - train_model.ipynb
+      - data/dataset.csv
+    outs:
+      - outputs/model.pkl
